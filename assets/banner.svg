@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.08)"/>
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)"/>
+    </linearGradient>
+    <style>
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.3; transform: scale(1); }
+        50% { opacity: 0.7; transform: scale(1.08); }
+      }
+      @keyframes dashFlow {
+        0% { stroke-dashoffset: 400; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes floatPill {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+      }
+      .bg-grid { opacity: 0.12; }
+      .pulse-node { animation: pulseGlow 4s infinite ease-in-out; }
+      .flow-line { stroke-dasharray: 12 12; animation: dashFlow 10s linear infinite; }
+      .floating-card { animation: floatPill 6s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- Dynamic Grid lines -->
+  <g class="bg-grid">
+    <line x1="0" y1="80" x2="1200" y2="80" stroke="#38bdf8" stroke-width="1"/>
+    <line x1="0" y1="160" x2="1200" y2="160" stroke="#38bdf8" stroke-width="1"/>
+    <line x1="0" y1="240" x2="1200" y2="240" stroke="#38bdf8" stroke-width="1"/>
+    <line x1="0" y1="320" x2="1200" y2="320" stroke="#38bdf8" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="400" stroke="#38bdf8" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="400" stroke="#38bdf8" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="400" stroke="#38bdf8" stroke-width="1"/>
+    <line x1="800" y1="0" x2="800" y2="400" stroke="#38bdf8" stroke-width="1"/>
+    <line x1="1000" y1="0" x2="1000" y2="400" stroke="#38bdf8" stroke-width="1"/>
+  </g>
+
+  <!-- Animated Sensor Data Flow Lines (Background) -->
+  <path d="M 40 310 Q 300 220 600 300 T 1160 230" fill="none" stroke="#818cf8" stroke-width="3" opacity="0.45" class="flow-line"/>
+  <path d="M 40 340 Q 350 260 700 320 T 1160 270" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.35" class="flow-line"/>
+
+  <!-- Pulsing Glow Nodes -->
+  <circle cx="150" cy="70" r="60" fill="#38bdf8" opacity="0.25" filter="blur(30px)" class="pulse-node"/>
+  <circle cx="1050" cy="330" r="70" fill="#c084fc" opacity="0.25" filter="blur(35px)" class="pulse-node"/>
+
+  <!-- Foreground Content Container -->
+  <g transform="translate(60, 130)">
+    <!-- Main Title -->
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="42" font-weight="800" fill="url(#titleGrad)" letter-spacing="0.5">
+      Enterprise Asset Performance Management
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="45" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#94a3b8">
+      Predictive Maintenance • Industrial AI • Asset Reliability • Digital Twins
+    </text>
+
+    <!-- Interactive Badges / Pills -->
+    <g transform="translate(0, 90)" class="floating-card">
+      <rect x="0" y="0" width="210" height="42" rx="21" fill="url(#cardGrad)" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.5"/>
+      <text x="20" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#38bdf8">⚙️ Asset Reliability</text>
+
+      <rect x="225" y="0" width="220" height="42" rx="21" fill="url(#cardGrad)" stroke="rgba(129, 140, 248, 0.4)" stroke-width="1.5"/>
+      <text x="245" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#818cf8">📊 Telemetry Analytics</text>
+
+      <rect x="460" y="0" width="230" height="42" rx="21" fill="url(#cardGrad)" stroke="rgba(192, 132, 252, 0.4)" stroke-width="1.5"/>
+      <text x="480" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#c084fc">🚀 Industrial IoT &amp; AI</text>
+    </g>
+  </g>
+</svg>
