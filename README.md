@@ -75,9 +75,9 @@ Below is a curated comparison of leading SaaS and enterprise APM platforms, sort
 
 Building an open, self-hosted APM ecosystem requires combining open-source IoT data collection, time-series storage, stream processing, digital twin frameworks, machine learning models, and maintenance workflows.
 
-Below are top open-source projects sorted by **GitHub Star Count (descending)**.
+Below are top open-source projects sorted by **GitHub Stars_Count (descending)**.
 
-| Project & Repository 📦 | GitHub Stars 🌟 | Description & APM Functionality ⚙️ |
+| Project & Repository 📦 | GitHub_Stars 🌟 | Description & APM Functionality ⚙️ |
 | :--- | :---: | :--- |
 | **TensorFlow**<br>`tensorflow/tensorflow` | [![Stars](https://img.shields.io/github/stars/tensorflow/tensorflow?style=social&color=white)](https://github.com/tensorflow/tensorflow/stargazers) | Open-source machine learning framework for training predictive maintenance models, time-series forecasting, and anomaly detection. |
 | **PyTorch**<br>`pytorch/pytorch` | [![Stars](https://img.shields.io/github/stars/pytorch/pytorch?style=social&color=white)](https://github.com/pytorch/pytorch/stargazers) | Deep learning framework used for vibration signal analysis, sensor anomaly detection, and remaining useful life (RUL) predictions. |
